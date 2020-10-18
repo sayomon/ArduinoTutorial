@@ -41,7 +41,7 @@ void loop() {
   newPushLow = buttonLowRead;
 
   if (newPushHigh == 0 && oldPushHigh == 1) {
-    if (LEDnum < maxNumLED) {
+    if (LEDnum < maxNumLED-1) {
       LEDnum = LEDnum + (maxNumLED / (numSettings - 1.));
       analogWrite(redPin, LEDnum);
     }
